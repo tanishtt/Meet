@@ -56,10 +56,46 @@ input {
     font-size: 16px;
 }
 
-button {
+#join {
     background: #302e2e23;
     color: #fff;
     font-size: 18px;
     padding: 12px 0;
     width: 100%;
+}
+
+#video-chat-rooms{
+    display: flex;
+    justify-content: center;
+
+}
+
+.btn-group button {
+    background-color: #04AA6D;
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    padding: 15px 32px;
+    cursor: pointer;
+    float: left;
+    margin: 0px 20px;
+    border-radius: 25px;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:hover {
+    background-color: #3659cb;
+}
+
+.btn-group{
+    display: flex;
+    justify-content: center;
 }

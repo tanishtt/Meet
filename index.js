@@ -69,13 +69,13 @@ io.on('connection',(socket)=>{
     });
 
     socket.on('candidate',(candidate, roomName)=>{
-        console.log('ICE: candidate');
+        console.log('ICE: candidate', candidate);
         socket.broadcast.to(roomName).emit('candidate',candidate);
     })
 
 
     socket.on('user:offer',(offer, roomName)=>{
-        console.log('offer created by user.');
+        console.log('offer created by user.',offer, roomName);
         socket.broadcast.to(roomName).emit('user:offer', offer);
 
     });
@@ -87,5 +87,12 @@ io.on('connection',(socket)=>{
 
     socket.on('disconnect',()=>{
         console.log('user disconnect');
+    });
+
+
+
+    socket.on('user:leave',(roomName)=>{
+        socket.leave(roomName);
+        socket.broadcast.to(roomName).emit('user:leave');
     })
 })

@@ -12,14 +12,26 @@
 
     <div id="video-chat-form">
         <h2 class="text">Video Chat App</h2>
-        <input id="room-name" type="text" placeholder="Room Name" />
+        <input name="room-name" id="room-name" type="text" placeholder="Room Name" />
         <button id="join">Join</button>
     </div>
     <div id="video-chat-rooms">
-        <video id="user-video"></video>
-        <video id="peer-video"></video>
+        
+        <div>
+            <h2>My Video</h2>
+            <video id="user-video"></video>
+        </div>
+        <div>
+            <h2>Peer's Video</h2>
+            <video id="peer-video"></video>
+        </div>
+        
     </div>
-
+<div id="btn-grp" class="btn-group" style="display: none;">
+    <button id="mute-btn">Mute</button>
+    <button id="video-off-btn">Hide Camera</button>
+    <button id="leave-btn">Leave</button>
+</div>
 </body>
 <script src="/socket.io/socket.io.js"></script>
 
