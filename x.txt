@@ -1,0 +1,24 @@
+const myMap = new Map();
+
+// Add some key-value pairs to the map
+myMap.set('key1', 'value1');
+myMap.set('key2', 'value2');
+myMap.set('key3', 'value3');
+
+// Get the value for a specific key
+const value1 = myMap.get('key1');
+
+// Check if the map contains a specific key
+const hasKey = myMap.has('key2');
+
+// Delete a key-value pair from the map
+myMap.delete('key3');
+
+// Iterate over the map
+for (const [key, value] of myMap) {
+  console.log(key, value);
+},
+
+
+
+ice framework server ke andar stun server hota hai
